@@ -13,7 +13,6 @@ private:
     string matricula;
     string color;
 public:
-    Automovil();
     Automovil(string matricula, string color);
 
     ~Automovil(); //desctructor

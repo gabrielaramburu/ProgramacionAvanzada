@@ -7,4 +7,7 @@ add_executable(2025 main.cpp
         01_EjemploBasicoObjeto/Persona.cpp
         01_EjemploBasicoObjeto/Persona.h
         02_EjemploBasicoConstructor/Automovil.cpp
-        02_EjemploBasicoConstructor/Automovil.h)
+        02_EjemploBasicoConstructor/Automovil.h
+        03_EjemploMiembroDeClase/Computador.cpp
+        03_EjemploMiembroDeClase/Computador.h
+)

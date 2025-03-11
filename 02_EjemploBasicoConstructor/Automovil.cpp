@@ -7,9 +7,7 @@
 #include <iostream>
 #include <ostream>
 
-Automovil::Automovil() {
 
-}
 
 Automovil::~Automovil() {
     cout << "Invocando destructor" << "\n";

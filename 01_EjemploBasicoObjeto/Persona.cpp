@@ -9,13 +9,13 @@
 #include <string>
 using namespace std;
 
-void Persona::setNombre(string nombre) {
-    this->nombre = nombre;
+void Persona::setNombre(string nom) {
+    this->nombre = nom;
 }
 void Persona::setEdad(int edad) {
     this->edad = edad;
 }
 
 void Persona::mostrarInformacion() {
-    cout << "Nombre: " << this->nombre << " edad, " << this-> edad << endl;
+    cout << "Soy " << this->nombre << ", mi edad es " << this-> edad << endl;
 }

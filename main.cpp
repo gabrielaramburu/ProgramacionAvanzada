@@ -1,6 +1,7 @@
 #include <iostream>
 #include "01_EjemploBasicoObjeto/Persona.h"
 #include "02_EjemploBasicoConstructor/Automovil.h"
+#include "03_EjemploMiembroDeClase/Computador.h"
 
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -14,12 +15,23 @@ int main() {
     p1.setEdad(30);
     p1.mostrarInformacion();
 
+    Persona p2;
+    p2.setNombre("María");
+    p2.setEdad(25);
+    p2.mostrarInformacion();
+
     std::cout << "Ejemplo básico constructor" << "\n";
 
     Automovil * a1 = new Automovil("BAA 1234","rojo");
     a1->mostrarInformacion();
 
     delete a1;
+
+    std::cout << "Ejemplo miembro de clase " << "\n";
+    Computador * c1 = new Computador(1,"intel", 16);
+    Computador * c2 = new Computador(2,"amd", 32);
+
+    Computador::mostrarCantidadComputadoras();
 
     cout << "Fin programa" << endl;
     return 0;
