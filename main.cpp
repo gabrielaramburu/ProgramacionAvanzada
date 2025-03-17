@@ -4,18 +4,22 @@
 #include "03_EjemploMiembroDeClase/Computador.h"
 #include "Ejemplo_04_AsociacionMultiplicadad_1/Casa.h"
 #include "Ejemplo_04_AsociacionMultiplicadad_1/Person.h"
+#include "Ejemplo_05_AsociacionMultiplicidadN/Biblioteca.h"
+#include "Ejemplo_05_AsociacionMultiplicidadN/Libro.h"
 
 void ejemploBasicoObjeto();
 void ejemploBasicoConstructor();
 void ejmploMiembroDeClase();
 void ejemploAsociacionMultiplicadad_1();
+void ejemploAsociacionMultiplicadad_N();
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 int main() {
     //ejemploBasicoObjeto();
     //ejemploBasicoConstructor();
     //ejmploMiembroDeClase();
-    ejemploAsociacionMultiplicadad_1();
+    //ejemploAsociacionMultiplicadad_1();
+    ejemploAsociacionMultiplicadad_N();
 
     cout << "Fin programa" << endl;
     return 0;
@@ -64,6 +68,24 @@ void ejemploAsociacionMultiplicadad_1() {
 
     p1->mostrar();
 };
+
+void ejemploAsociacionMultiplicadad_N() {
+    Libro *l1= new Libro("ABC11234","Mi primer libro");
+    Libro *l2= new Libro("ABC3333","Mi segundo libro");
+    Libro *l3= new Libro("BBB4444","Mi tercer libro");
+
+    Biblioteca * biblio =
+        new Biblioteca("Bibloteca municipal",
+            "Rafael Perez del Puerso",
+            "de 8:00 a 19:00");
+
+    biblio->addLIbro(l1);
+    biblio->addLIbro(l2);
+    biblio->addLIbro(l3);
+
+    biblio->mostrarLibros();
+
+}
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
 //  Also, you can try interactive lessons for CLion by selecting

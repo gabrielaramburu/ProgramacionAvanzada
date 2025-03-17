@@ -14,4 +14,8 @@ add_executable(2025 main.cpp
         Ejemplo_04_AsociacionMultiplicadad_1/Person.h
         Ejemplo_04_AsociacionMultiplicadad_1/Casa.cpp
         Ejemplo_04_AsociacionMultiplicadad_1/Casa.h
+        Ejemplo_05_AsociacionMultiplicidadN/Biblioteca.cpp
+        Ejemplo_05_AsociacionMultiplicidadN/Biblioteca.h
+        Ejemplo_05_AsociacionMultiplicidadN/Libro.cpp
+        Ejemplo_05_AsociacionMultiplicidadN/Libro.h
 )
