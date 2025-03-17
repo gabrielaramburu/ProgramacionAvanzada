@@ -26,3 +26,8 @@ void Computador::encender() {
 void Computador::mostrarCantidadComputadoras() {
     cout << "Cantidad de computadores creados: " << cantidadComputadores << endl;
 }
+
+Computador::~Computador() {
+    Computador::cantidadComputadores--;
+    cout << "computador destruido, id," << this->id << endl;
+}

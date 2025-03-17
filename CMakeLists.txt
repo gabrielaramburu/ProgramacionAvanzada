@@ -10,4 +10,8 @@ add_executable(2025 main.cpp
         02_EjemploBasicoConstructor/Automovil.h
         03_EjemploMiembroDeClase/Computador.cpp
         03_EjemploMiembroDeClase/Computador.h
+        Ejemplo_04_AsociacionMultiplicadad_1/Person.cpp
+        Ejemplo_04_AsociacionMultiplicadad_1/Person.h
+        Ejemplo_04_AsociacionMultiplicadad_1/Casa.cpp
+        Ejemplo_04_AsociacionMultiplicadad_1/Casa.h
 )

@@ -15,7 +15,8 @@ private:
 
     static int cantidadComputadores; //atributo de clase
 public:
-Computador(int id, string procesador, int memoriaRam);
+    ~Computador();
+    Computador(int id, string procesador, int memoriaRam);
     void encender();
     void apagar();
 
