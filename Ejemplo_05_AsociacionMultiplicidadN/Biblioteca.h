@@ -7,7 +7,6 @@
 #include <string>
 #include "Libro.h"
 #include <list>
-#include <vector>
 using namespace std;
 
 class Biblioteca {
