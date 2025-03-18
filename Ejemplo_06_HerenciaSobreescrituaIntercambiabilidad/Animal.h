@@ -13,7 +13,7 @@ protected: //visible para toda la jerarquía
     int tamanio;
 public:
     Animal();
-    virtual ~Animal();
+    virtual ~Animal(); //ojo con esto, es para que funcione la jerarquía de clases
     void mostrarTamanio();
     void setTamanio(int tamanio);
 };

@@ -33,11 +33,11 @@ int main() {
     //ejemploBasicoConstructor();
     //ejmploMiembroDeClase();
     //ejemploAsociacionMultiplicadad_1();
-    ejemploAsociacionMultiplicadad_N();
+    //ejemploAsociacionMultiplicadad_N();
     //ejemploHerenciaSobreescritura();
     //ejemploIntercambiabilidad();
     //ejemploPolimorfismo_1_formaDeAprender();
-    //ejemploPolimorfismo_2_figuras();
+    ejemploPolimorfismo_2_figuras();
 
     cout << "Fin programa" << endl;
     return 0;
@@ -112,6 +112,7 @@ void ejemploHerenciaSobreescritura() {
     Perro *miPerrito = new Perro("sultan");
     miPerrito->setTamanio(100); //comportamiento heredado de animal
     miPerrito->mostrarTamanio();
+
     miPerrito->setTiempoGestacion(4); //comportamiento heredado de mamifero
     miPerrito->mostrarTiempoGestacion();
     miPerrito->emitirSonido(); //comportamiento heredado y sobreescrito
@@ -125,8 +126,8 @@ void ejemploHerenciaSobreescritura() {
 }
 
 void ejemploIntercambiabilidad() {
-    //observar como esta compila ya que todo Perro es un Animal
-    //ya que establecimos esa realción en el código (herencia)
+    //observar como esto compila ya que todo Perro es un Animal
+    //Establecimos esa realción en el código (usando herencia)
     Animal *miPerrito = new Perro("sultan");
     miPerrito->setTamanio(100);
     miPerrito->mostrarTamanio();
@@ -137,13 +138,20 @@ void ejemploIntercambiabilidad() {
     //miPerrito->emitirSonido();
 
     //Para que funcione tenemos que hacer un casting, versión estilo C (no segura)
+    //dynamic_cast sería la forma segura de hacerlo
     ((Perro*)miPerrito)->emitirSonido();
     ((Perro*)miPerrito)->mostrarTiempoGestacion();
+
 
     //note que para que esto funcione tiene que haber en la clase base al menos una
     //funcion virtual (complicaciones del lenguaje)
     Perro * p1 = dynamic_cast<Perro*>(miPerrito);
-    p1->emitirSonido();
+    if (p1 == nullptr) {
+        p1->emitirSonido();
+    } else {
+        cout <<"error grave, esto no debería de pasar. ";
+    }
+
 }
 
 void ejemploPolimorfismo_1_formaDeAprender() {
