@@ -20,5 +20,5 @@ float Rectangulo::calcularArea() {
 }
 
 string Rectangulo::toString() {
-    return "muestro rectángulo";
+    return "soy un rectángulo";
 }

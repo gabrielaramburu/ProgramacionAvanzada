@@ -8,6 +8,8 @@
 
 
 class Mamifero : public Animal{
+protected:
+    int tiempoGestacion;
 private:
 public:
     Mamifero();
@@ -15,8 +17,7 @@ public:
     void mostrarTiempoGestacion();
     void virtual emitirSonido(); //observar la palabra reservada virtual
 
-protected:
-    int tiempoGestacion;
+
 };
 
 

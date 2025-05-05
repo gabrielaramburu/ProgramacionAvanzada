@@ -21,5 +21,5 @@ float Triangulo::calcularArea() {
 }
 
 string Triangulo::toString(){
-    return "muestro triangulo";
+    return "soy un triangulo";
 }

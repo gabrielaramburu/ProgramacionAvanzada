@@ -15,7 +15,6 @@ public:
     Gato();
     Gato(string nombre);
     void emitirSonido() override;
-protected:
 };
 
 

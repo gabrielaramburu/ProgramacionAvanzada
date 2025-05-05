@@ -159,12 +159,13 @@ void ejemploPolimorfismo_1_formaDeAprender() {
     PersonaPoli *p2 = new Adulto();
     Niño *p3 = new Niño();
     Adulto *p4 = new Adulto();
+    PersonaPoli *p5 = new PersonaPoli();
 
     PersonaPoli::mostrarFormaAprender(p1);
     PersonaPoli::mostrarFormaAprender(p2);
     PersonaPoli::mostrarFormaAprender(p3);
     PersonaPoli::mostrarFormaAprender(p4);
-
+    PersonaPoli::mostrarFormaAprender(p5);
 }
 void mostrarInfoFiguras(list<Figura*> figuras);
 
@@ -183,6 +184,7 @@ void ejemploPolimorfismo_2_figuras() {
     cout << endl << "Recorro figuras" << endl;;
     list<Figura*> figuras;
     figuras.push_back(f);
+    figuras.push_back(f2);
     figuras.push_back(f2);
 
     mostrarInfoFiguras(figuras);
