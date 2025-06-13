@@ -12,8 +12,8 @@ add_executable(Dis_EjemploArquitecturaLogin
     src/logica/controlador/SistemaControlador.cpp
     src/logica/controlador/SistemaControlador.h
     src/logica/interfaceSistema/ISistema.h
-        src/logica/dominio/Sistema.cpp
-        src/logica/dominio/Sistema.h
+        src/logica/dominio/LoginUsr.cpp
+        src/logica/dominio/LoginUsr.h
         src/logica/dominio/Usuario.cpp
         src/logica/dominio/Usuario.h
     src/presentacion/Login.cpp

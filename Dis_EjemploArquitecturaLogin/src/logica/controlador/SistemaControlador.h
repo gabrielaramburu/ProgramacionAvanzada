@@ -11,7 +11,7 @@
 #include <string>
 
 #include "../interfaceSistema/ISistema.h"
-#include "../dominio/Sistema.h"
+#include "../dominio/LoginUsr.h"
 
 class SistemaControlador : public ISistema{
 
@@ -19,7 +19,7 @@ class SistemaControlador : public ISistema{
 //las instancias de objetos que necesita
 //
 private:
-	Sistema* sistema;
+	LoginUsr* loginUsr;
 
 public:
 	SistemaControlador();

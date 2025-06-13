@@ -9,12 +9,12 @@
 
 #include <string>
 
-#include "../dominio/Sistema.h"
+#include "../dominio/LoginUsr.h"
 
 SistemaControlador::SistemaControlador() {
 	//siempre que instancio un controlador, intancio sus dependencias
 	///en este caso la clase Sistema.
-	this->sistema = new Sistema();
+	this->loginUsr = new LoginUsr();
 
 }
 
@@ -27,6 +27,6 @@ string SistemaControlador::ingresar(string nick, string pass) {
 	//por lo que es posible que no le encutre mucho sentido
 	//en caso de usos más complejos el controlador cumple el rol de
 	//"orquestador", por ahor lo mantemos simple.
-	return this->sistema->ingresar(nick, pass);
+	return this->loginUsr->ingresar(nick, pass);
 }
 
