@@ -16,6 +16,9 @@ void Persona::setEdad(int edad) {
     this->edad = edad;
 }
 
-void Persona::mostrarInformacion() {
-    cout << "Soy " << this->nombre << ", mi edad es " << this-> edad << endl;
+string Persona::getNombre() {
+    return this->nombre;
+}
+void Persona::saludar() {
+    cout << "Hola, soy " << this->nombre << ", mi edad es " << this-> edad << endl;
 }

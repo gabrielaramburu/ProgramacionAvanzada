@@ -18,7 +18,7 @@ public:
     void setEdad(int edad);
     int getEdad();
 
-    void mostrarInformacion();
+    void saludar();
 };
 
 
