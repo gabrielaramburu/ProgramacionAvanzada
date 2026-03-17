@@ -42,8 +42,11 @@ void ejemploFind() {
     if (usuario != nullptr) {
         string res;
         //para poder utilizar las operaciones del Usuario tengo que hacer un cast
-        //res = dynamic_cast<Usuario*>(usuario)->getNombre(); es lo mismo que lo de abajo
-        res = ((Usuario*)usuario)->getNombre();
+        Usuario* usr = dynamic_cast<Usuario*>(usuario); //es lo mismo que lo de abajo
+        if (usr != nullptr) {
+            res = usr->getNombre();
+            //res = ((Usuario*)usuario)->getNombre();
+        }
         cout << "Encontre usuario " << res;
     }
 }
@@ -58,4 +61,11 @@ void ejemploIteracion() {
         iter->next();
     }
     cout << "Total de sueldos: " << total;
+
+    //for (IIterator *iter = usuarios->getIterator(); iter->hasCurrent();iter->next()) {
+    // total = total + ((Usuario*)iter->getCurrent())->getSueldo();
+    //}
+
+
+
 }

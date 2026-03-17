@@ -20,7 +20,7 @@ public:
     void encender();
     void apagar();
 
-    static void mostrarCantidadComputadoras();
+    static void mostrarCantidadComputadoras(); //operación de clase
 };
 
 

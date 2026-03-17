@@ -17,6 +17,7 @@ void Biblioteca::addLIbro(Libro *libro) {
     this->libros.push_back(libro);
 }
 
+/* implementación con iterador
 void Biblioteca::mostrarLibros() {
     list<Libro*>::iterator it;
     for (it = libros.begin(); it != libros.end(); it++) {
@@ -27,4 +28,10 @@ void Biblioteca::mostrarLibros() {
         //
     }
 }
-
+*/
+//implemntacion más sencilla
+void Biblioteca::mostrarLibros() {
+    for (auto instanciaLibro: this->libros) {
+        instanciaLibro->mostrar();
+    }
+}

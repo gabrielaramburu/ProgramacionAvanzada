@@ -1,4 +1,5 @@
 #include <iostream>
+#include "00_EjemploBasico/Mascota.h"
 #include "01_EjemploBasicoObjeto/Persona.h"
 #include "02_EjemploBasicoConstructor/Automovil.h"
 #include "03_EjemploMiembroDeClase/Computador.h"
@@ -17,6 +18,7 @@
 #include "Ejemplo_08_EjemploPolimorfismo_2/Triangulo.h"
 
 
+void ejemploBasico_0();
 void ejemploBasicoObjeto();
 void ejemploBasicoConstructor();
 void ejmploMiembroDeClase();
@@ -29,33 +31,40 @@ void ejemploPolimorfismo_2_figuras();
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 int main() {
+    //ejemploBasico_0();
     //ejemploBasicoObjeto();
     //ejemploBasicoConstructor();
     //ejmploMiembroDeClase();
     //ejemploAsociacionMultiplicadad_1();
-    //ejemploAsociacionMultiplicadad_N();
+    ejemploAsociacionMultiplicadad_N();
     //ejemploHerenciaSobreescritura();
     //ejemploIntercambiabilidad();
     //ejemploPolimorfismo_1_formaDeAprender();
-    ejemploPolimorfismo_2_figuras();
+    //ejemploPolimorfismo_2_figuras();
 
     cout << "Fin programa" << endl;
     return 0;
+}
+void ejemploBasico_0() {
+    Mascota * mascota = new Mascota();
+    mascota->mostrarInfo();
+
+
 }
 void ejemploBasicoObjeto() {
     // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
     // <b>lang</b> variable name to see how CLion can help you rename it.
     std::cout << "1 Ejemplo básico de POO " << "!\n";
 
-    Persona p1;
-    p1.setNombre("Luis");
-    p1.setEdad(30);
-    p1.mostrarInformacion();
+    Persona * p1 = new Persona();//objetos dinámico
+    p1->setNombre("Luis");
+    p1->setEdad(30);
+    p1->saludar();
 
-    Persona p2;
-    p2.setNombre("María");
-    p2.setEdad(25);
-    p2.mostrarInformacion();
+    Persona * p2 = new Persona();
+    p2->setNombre("María");
+    p2->setEdad(25);
+    p2->saludar();
 }
 void ejemploBasicoConstructor() {
     std::cout << "2 Ejemplo básico constructor" << "\n";
@@ -63,10 +72,14 @@ void ejemploBasicoConstructor() {
     Automovil * a1 = new Automovil("BAA 1234","rojo");
     a1->mostrarInformacion();
 
+    delete a1;
+
+
     Automovil * a2 = new Automovil("BAA 1111","amarillo");
     a2->mostrarInformacion();
-    delete a1;
-    delete a2;
+
+    //delete a2;
+
 }
 void ejmploMiembroDeClase() {
     std::cout << "3 Ejemplo miembro de clase " << "\n";

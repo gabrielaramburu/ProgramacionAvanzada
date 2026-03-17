@@ -15,8 +15,8 @@ Automovil::~Automovil() {
 
 
 
-Automovil::Automovil(string matricula, string color) {
-    this->matricula = matricula;
+Automovil::Automovil(string mat, string color) {
+    this->matricula = mat;
     this->color = color;
 }
 

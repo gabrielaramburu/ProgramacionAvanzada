@@ -4,6 +4,8 @@ project(2025)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(2025 main.cpp
+        00_EjemploBasico/Mascota.cpp
+        00_EjemploBasico/Mascota.h
         01_EjemploBasicoObjeto/Persona.cpp
         01_EjemploBasicoObjeto/Persona.h
         02_EjemploBasicoConstructor/Automovil.cpp
