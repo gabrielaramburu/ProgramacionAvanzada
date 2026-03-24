@@ -16,7 +16,8 @@
 #include "Ejemplo_08_EjemploPolimorfismo_2/Figura.h"
 #include "Ejemplo_08_EjemploPolimorfismo_2/Rectangulo.h"
 #include "Ejemplo_08_EjemploPolimorfismo_2/Triangulo.h"
-
+#include "Ejemplo_09_EliminacionAsociacionBidireccional/Estudiante.h"
+#include "Ejemplo_09_EliminacionAsociacionBidireccional/Curso.h"
 
 void ejemploBasico_0();
 void ejemploBasicoObjeto();
@@ -28,20 +29,22 @@ void ejemploHerenciaSobreescritura();
 void ejemploIntercambiabilidad();
 void ejemploPolimorfismo_1_formaDeAprender();
 void ejemploPolimorfismo_2_figuras();
+void ejemploEliminacionBidireccional();
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 int main() {
     //ejemploBasico_0();
+
     //ejemploBasicoObjeto();
     //ejemploBasicoConstructor();
     //ejmploMiembroDeClase();
     //ejemploAsociacionMultiplicadad_1();
-    ejemploAsociacionMultiplicadad_N();
+    //ejemploAsociacionMultiplicadad_N();
     //ejemploHerenciaSobreescritura();
     //ejemploIntercambiabilidad();
     //ejemploPolimorfismo_1_formaDeAprender();
     //ejemploPolimorfismo_2_figuras();
-
+    ejemploEliminacionBidireccional();
     cout << "Fin programa" << endl;
     return 0;
 }
@@ -159,10 +162,10 @@ void ejemploIntercambiabilidad() {
     //note que para que esto funcione tiene que haber en la clase base al menos una
     //funcion virtual (complicaciones del lenguaje)
     Perro * p1 = dynamic_cast<Perro*>(miPerrito);
-    if (p1 == nullptr) {
+    if (p1 != nullptr) {
         p1->emitirSonido();
     } else {
-        cout <<"error grave, esto no debería de pasar. ";
+        cout <<"dentro de miPerrito no tengo una instancia de Perro, hago otro cosas ";
     }
 
 }
@@ -209,6 +212,29 @@ void mostrarInfoFiguras(list<Figura*> figuras) {
         cout << endl;
         cout << ((*it)->toString()) << endl; //despacho dinámico
     }
+
+    cout << "Otro recorrido"<< endl;
+    for (auto figura: figuras) {
+        figura->calcularArea();
+        cout << endl;
+    }
+}
+
+void ejemploEliminacionBidireccional() {
+    Estudiante *est1 = new Estudiante("est1");
+    Estudiante *est2 = new Estudiante("est2");
+    Curso *c1 = new Curso("c1");
+    c1->agregarEstudiante(est1);
+    est1->inscribirACurso(c1);
+
+    c1->agregarEstudiante(est2);
+    est2->inscribirACurso(c1);
+
+    c1->listarEstudiantes();
+
+    delete est1;
+
+    c1->listarEstudiantes();
 }
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.

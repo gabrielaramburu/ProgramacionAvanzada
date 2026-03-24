@@ -40,4 +40,8 @@ add_executable(2025 main.cpp
         Ejemplo_08_EjemploPolimorfismo_2/Rectangulo.h
         Ejemplo_08_EjemploPolimorfismo_2/Triangulo.cpp
         Ejemplo_08_EjemploPolimorfismo_2/Triangulo.h
+        Ejemplo_09_EliminacionAsociacionBidireccional/Estudiante.cpp
+        Ejemplo_09_EliminacionAsociacionBidireccional/Curso.cpp
+        Ejemplo_09_EliminacionAsociacionBidireccional/Estudiante.h
+        Ejemplo_09_EliminacionAsociacionBidireccional/Curso.h
 )
