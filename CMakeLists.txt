@@ -44,4 +44,12 @@ add_executable(2025 main.cpp
         Ejemplo_09_EliminacionAsociacionBidireccional/Curso.cpp
         Ejemplo_09_EliminacionAsociacionBidireccional/Estudiante.h
         Ejemplo_09_EliminacionAsociacionBidireccional/Curso.h
+        Ejemplo_10_GeneracionParcialDeCodigo/presentacion/PantallaCasoDeUso1.cpp
+        Ejemplo_10_GeneracionParcialDeCodigo/presentacion/PantallaCasoDeUso1.h
+        Ejemplo_10_GeneracionParcialDeCodigo/negocio/ISistema.h
+        Ejemplo_10_GeneracionParcialDeCodigo/negocio/DTInfo.cpp
+        Ejemplo_10_GeneracionParcialDeCodigo/negocio/DTInfo.h
+        Ejemplo_10_GeneracionParcialDeCodigo/negocio/Sistema.cpp
+        Ejemplo_10_GeneracionParcialDeCodigo/negocio/Sistema.h
+
 )

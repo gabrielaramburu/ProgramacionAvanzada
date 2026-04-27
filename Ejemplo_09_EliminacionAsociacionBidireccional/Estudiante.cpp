@@ -10,12 +10,12 @@ Estudiante::Estudiante(string nombre){
 }
 
 Estudiante::~Estudiante() {
-  cout << "Elimino estudiante " << this->nombre << endl;
+  //cout << "Elimino estudiante " << this->nombre << endl;
   //recorro la lista de cursos del estudiante
   //y a cada curso le pido que de de baja el mismo
   //(lo borre de su lista)
   for (auto curso: this->cursos) {
-    //curso->eliminarEstudiante(this);
+    curso->eliminarEstudiante(this);
   }
 }
 

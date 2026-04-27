@@ -28,6 +28,8 @@ void Curso::eliminarEstudiante(Estudiante* estudiante) {
     }
     it++;
   }
+
+  //this->listaEstudiantes.remove(estudiante);
 }
 
 

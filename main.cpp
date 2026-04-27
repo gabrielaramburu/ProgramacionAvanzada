@@ -18,6 +18,7 @@
 #include "Ejemplo_08_EjemploPolimorfismo_2/Triangulo.h"
 #include "Ejemplo_09_EliminacionAsociacionBidireccional/Estudiante.h"
 #include "Ejemplo_09_EliminacionAsociacionBidireccional/Curso.h"
+#include "Ejemplo_10_GeneracionParcialDeCodigo/presentacion/PantallaCasoDeUso1.h"
 
 void ejemploBasico_0();
 void ejemploBasicoObjeto();
@@ -30,6 +31,7 @@ void ejemploIntercambiabilidad();
 void ejemploPolimorfismo_1_formaDeAprender();
 void ejemploPolimorfismo_2_figuras();
 void ejemploEliminacionBidireccional();
+void ejemplo10_GeneracionParcialDeCodigo();
 // TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 int main() {
@@ -44,7 +46,8 @@ int main() {
     //ejemploIntercambiabilidad();
     //ejemploPolimorfismo_1_formaDeAprender();
     //ejemploPolimorfismo_2_figuras();
-    ejemploEliminacionBidireccional();
+    //ejemploEliminacionBidireccional();
+    ejemplo10_GeneracionParcialDeCodigo();
     cout << "Fin programa" << endl;
     return 0;
 }
@@ -206,13 +209,14 @@ void ejemploPolimorfismo_2_figuras() {
     mostrarInfoFiguras(figuras);
 }
 void mostrarInfoFiguras(list<Figura*> figuras) {
+    /*
     list<Figura*>::iterator it;
     for (it = figuras.begin(); it != figuras.end(); ++it) {
         (*it)->calcularArea(); //despacho dinámico
         cout << endl;
         cout << ((*it)->toString()) << endl; //despacho dinámico
     }
-
+    */
     cout << "Otro recorrido"<< endl;
     for (auto figura: figuras) {
         figura->calcularArea();
@@ -235,6 +239,14 @@ void ejemploEliminacionBidireccional() {
     delete est1;
 
     c1->listarEstudiantes();
+}
+
+void ejemplo10_GeneracionParcialDeCodigo() {
+    //como este caso es muy sencillo, no tiene implementado
+    //un menú. El menú debería ser tambin una clase.
+    PantallaCasoDeUso1* pantalla = new PantallaCasoDeUso1();
+    pantalla->mostrarPantalla();
+
 }
 // TIP See CLion help at <a
 // href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>.
